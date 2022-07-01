@@ -1,0 +1,127 @@
+.todo-list {
+    width: 80%;
+    margin: 20px;
+    padding-right: 6px;
+    font-size: 18px;
+    flex: 1;
+
+    list-style: none;
+    overflow-y: auto;
+}
+
+.todo-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #4a26ab;
+}
+
+.todo-item {
+    padding: 10px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #9543a7;
+}
+
+.todo-item:nth-child(even) {
+    background-color: #e350a8;
+}
+
+.todo-item + .todo-item {
+    margin-top: 18px;
+}
+
+.todo-item__checkbox {
+    display: none;
+}
+
+.todo-item__label {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #b8e7ea;
+
+    cursor: pointer;
+}
+
+.todo-item__check-btn {
+    font-size: 12px;
+    color: #b8e7ea;
+}
+
+.todo-item__checkbox:checked ~ .todo-item__label{
+    background-color: #4a26ab;
+}
+
+.todo-item__text {
+    flex: 1;
+    margin: 0 12px;
+    text-align: justify;
+}
+
+.todo-item__update-btn {
+    margin-right: 6px;
+}
+
+.todo-item__update-btn,.todo-item__delete-btn {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.update-todo {
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 50px);
+
+    display: none;
+    width: 60%;
+    padding: 2px;
+    border: solid 2px #4a26ab;
+    border-radius: 5px;
+
+    background-color: #128d39;
+}
+
+.update-todo.show {
+    display: flex;
+}
+
+.update-todo__input {
+    flex: 1;
+    width: 50%;
+    padding: 6px;
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+    
+    color: #fff;
+    background-color: transparent;
+
+}
+
+.update-todo__close-btn {
+    padding: 8px 6px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    color: #fff;
+    background-color: #4a26ab;
+}
+
+.update-todo__close-btn:hover {
+    cursor: pointer;
+    background-color: #602bc1;
+}

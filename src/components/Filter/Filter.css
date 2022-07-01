@@ -1,0 +1,48 @@
+.filter {
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-list {
+    display: flex;
+    list-style: none;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.filter-item__radio {
+    cursor: pointer;
+}
+
+.filter-item__label {
+    font-size: 16px;
+    padding-left: 3px;
+    cursor: pointer;
+}
+
+.clear-btn {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 2px;
+
+    color: #fff;
+    background-color: #4a26ab;
+}
+
+.clear-btn:hover {
+    cursor: pointer;
+    background-color: #602bc1;
+}
+
+.clear-btn:active {
+    transform: translateY(2px);
+}
