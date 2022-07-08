@@ -8,10 +8,10 @@
 }
 
 .add-todo__input {
+    flex: 1;
+    padding: 6px;
     border: none;
     outline: none;
-    padding: 6px;
-    flex: 1;
     font-size: 14px;
 
     color: #fff;
@@ -42,3 +42,12 @@
 .add-todo__btn:active {
     transform: translateY(1px);
 }
+
+
+/* Mobile Screen */
+
+@media only screen and (max-width: 740px)  {
+    .add-todo {
+        width: 92%;
+    }
+  }

@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addNewTodo } from "../../actions/todo";
 import { v4 as uuid } from "uuid";
+import { addNewTodo } from "../../actions/todo";
+import { todoListSelector } from "../../selectors";
 import "./AddTodo.css";
 
 function AddTodo() {
-  const todoList = useSelector((state) => state.todo.list);
+  const todoList = useSelector(todoListSelector);
   const dispatch = useDispatch();
 
   const addInputElement = useRef();
@@ -29,13 +30,13 @@ function AddTodo() {
       })
     );
     setInputValue("");
-    addInputElement.current.focus();
   };
 
   const handlePressEnterKey = (e) => {
     if (e.keyCode === 13) {
       handleAddTodo();
     }
+    return;
   };
 
   useEffect(() => {
@@ -47,12 +48,12 @@ function AddTodo() {
       <input
         className="add-todo__input"
         placeholder="Enter a Todo ..."
-        spellCheck="false"
         value={inputValue}
         ref={addInputElement}
         onChange={handleChangeInput}
         onKeyDown={handlePressEnterKey}
-      ></input>
+        spellCheck="false"
+      />
       <button className="add-todo__btn" onClick={handleAddTodo}>
         Add Todo
       </button>

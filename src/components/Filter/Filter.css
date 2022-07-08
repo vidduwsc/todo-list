@@ -46,3 +46,27 @@
 .clear-btn:active {
     transform: translateY(2px);
 }
+
+/* Tablet Screen */
+
+@media only screen and (max-width: 1024px)  {
+    .filter-item {
+        margin-right: 18px;
+    }
+
+    .filter-item__label {
+        font-size: 18px;
+    }
+  }
+  
+  /* Mobile Screen */
+  
+  @media only screen and (max-width: 740px)  {
+    .filter {
+        flex-direction: column;
+    }
+
+    .clear-btn {
+        margin-top: 12px;
+    }
+  }

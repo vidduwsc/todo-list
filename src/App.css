@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 
 .container {
@@ -32,4 +31,26 @@
 .heading {
   font-size: 36px;
   margin-bottom: 20px;
+}
+
+/* Tablet Screen */
+
+@media only screen and (max-width: 1024px)  {
+  .content {
+    width: 76%;
+    height: 80%;
+  }
+}
+
+/* Mobile Screen */
+
+@media only screen and (max-width: 740px)  {
+  .content {
+    width: 92%;
+    height: 80%;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
 }
